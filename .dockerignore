@@ -1,9 +1,15 @@
+.gitignore
+.travis.yml
+LICENSE
+push.service
+README.md
+tests.py
+docker-compose.yml*
+.env*
+
 .gitingore
 .ropeproject
 .ropeproject/*
-settings.py
-docker-compose.yml
-.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

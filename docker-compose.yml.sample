@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  gotify-nextcloud:
+    image: gotify-nextcloud:latest
+    container_name: gotify-nextcloud
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - NEXTCLOUD_URL=https://nextcloudexample.com
+      - NEXTCLOUD_USER=$NEXTCLOUD_USER
+      - NEXTCLOUD_PASSWORD=$NEXTCLOUD_PASSWORD
+      - GOTIFY_URL=https://gotifyexample.com
+      - GOTIFY_TOKEN=$GOTIFY_TOKEN
+      - NOTIFICATION_DELAY=30
+      - NOTIFICATION_PRIORITY=10
+      - LOG_PATH=logs/gotify-nc.log
